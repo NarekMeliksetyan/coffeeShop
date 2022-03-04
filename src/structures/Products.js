@@ -1,6 +1,6 @@
 export default function Products(){
     return (
-        <section className="products" id="products">
+        <section className="products">
 
          <h1 className="heading"> our <span>products</span> </h1>
 

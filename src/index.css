@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   font-size: 62.5%;
-  
 }
 body{
   background-color: black;
@@ -25,7 +24,7 @@ header{
   padding: 0.7rem 7%;
   border-bottom: 1px solid rgb(92, 86, 86) ;
   position: fixed;
-  z-index: 1;
+  z-index: 1000;
   top: 0;
   left: 0;
   right: 0;
@@ -96,6 +95,7 @@ header .text a{
   justify-content: space-around;
   letter-spacing: 0.2rem;
 }
+
 .About .frame{
   display: flex;
   align-items: center;
@@ -116,7 +116,7 @@ header .text a{
 }
 section{
   padding: 2rem 7%;
-  border-bottom: 1px solid rgb(29, 29, 29) ;
+  padding-top: 80px;
 }
 .About .frameRight h3{
   color:#eee;
@@ -135,7 +135,7 @@ section{
   letter-spacing: 0.5rem;
 }
 h1{
-  padding: 2.5rem;
+  padding: 2.5rem 0 2rem;
   color: #bd9361;
   font-family: "Roboto", sans-serif;
   font-size: 4rem;
@@ -303,7 +303,7 @@ h1{
   text-transform: none;
   background:none;
 }
-section h3{
+ h3{
   color: #bd9361;
   font-family: "Roboto", sans-serif;
   font-size: 4rem;

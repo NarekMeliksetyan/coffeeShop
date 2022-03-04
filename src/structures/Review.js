@@ -1,6 +1,6 @@
 export default function Review(){
     return(
-        <section className="review" id="review">
+        <section className="review">
 
     <h1 className="heading"> customer's review</h1>
 

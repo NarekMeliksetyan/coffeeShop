@@ -1,16 +1,18 @@
-import { useNavigate } from "react-router-dom"
+import { Link } from "react-scroll/modules"
 export default function Header(){
     return (
         <header>
-            <img src={require("./images/logo.png")} alt="" className="coffeelogo"/>
-            <nav className="text" >
-                <a>Home</a>
-                <a>About</a>
-                <a>Menu</a>
-                <a>Products</a>
-                <a>Review</a>
-                <a>Contact</a>
-                <a>Blogs</a>
+            <Link to="Home" smooth={true} duration={500}>
+                <img src={require("./images/logo.png")} alt="" className="coffeelogo"/>
+            </Link>
+            <nav className="text"  >
+                <Link to="Home" smooth={true} duration={500}  >Home</Link> 
+                <Link to="About" smooth={true} duration={500}   >About</Link> 
+                <Link to="Menu" smooth={true} duration={500}    >Menu</Link> 
+                <Link to="products" smooth={true} duration={500} >Products</Link> 
+                <Link to="review" smooth={true} duration={500}  >Review</Link> 
+                <Link to="contact" smooth={true} duration={500} >Contact</Link> 
+                <Link to="Blogs"  smooth={true} duration={500}  >Blogs</Link> 
             </nav>
 
             <div  className="ButtonsHeader">

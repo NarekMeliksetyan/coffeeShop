@@ -1,6 +1,6 @@
 export default function Menu(){
     return (
-        <section className="Menu" path="/menu">
+        <section className="Menu">
             <h1>Menu</h1>
           <div className="menuItem">
 

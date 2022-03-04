@@ -7,6 +7,7 @@ import Review   from "./structures/Review";
 import Contact  from "./structures/Contact";
 import Blogs    from "./structures/Blogs";
 import Footer   from "./structures/Footer";
+
 function App() {
   return (
    <>
