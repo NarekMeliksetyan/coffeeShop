@@ -1,13 +1,436 @@
-body {
+*{
+  transition: .5s;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-size: 62.5%;
+  
+}
+body{
+  background-color: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html::-webkit-scrollbar{
+  width: .8rem;
+}
+
+html::-webkit-scrollbar-thumb{
+  background: #fff;
+  border-radius: 5rem;
+}
+header{
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 7%;
+  border-bottom: 1px solid rgb(92, 86, 86) ;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  
+}
+header .text a:hover{
+  color:#bd9361;
+  border-bottom: .1rem solid #bd9361;
+  padding-bottom: .5rem;
+  transition: .2s;
+}
+header .coffeelogo{
+ height: 70%; 
+ cursor: pointer;
+}
+header .text a{
+  margin: 0 9.8px;
+  color:white;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+}
+.buttonshead{
+  margin-left: 25px ;
+  max-height: 30px;
+  cursor: pointer;
+}
+.textHome{
+  font-family: 'Roboto', sans-serif;
+  max-width: 50rem;
+}
+
+.Home{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(./structures/home-img.jpeg) no-repeat;
+  border-bottom: 1px solid rgb(29, 29, 29) ;
+  background-size: cover;
+  background-position: center;
+  padding: 2rem 7%;
+  box-sizing: border-box;
+}
+.Home h3{
+  font-size: 52.8px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.Home p{
+  font-size: 17.6px ;
+  line-height: 1.8;
+  padding: 8.8px 0;
+  color:#eee  
+}
+.btn{
+  margin-top: 1rem;
+  padding: 0.9rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  background-color: #bd9361;
+  transition: .2s linear;
+}
+.btn:hover{
+  padding: 0.9rem 5rem;
+  justify-content: space-around;
+  letter-spacing: 0.2rem;
+}
+.About .frame{
+  display: flex;
+  align-items: center;
+  background: #13131a;
+  flex-wrap: wrap; 
+}
+.About .frame .frameLeft{
+  flex:1 1 45rem;
+}
+
+.About .frame .frameLeft img{
+  width: 100%;
+}
+.About .frame .frameRight{
+  flex:1 1 45rem;
+  padding:2rem;
+  font-family: "Roboto", sans-serif;
+}
+section{
+  padding: 2rem 7%;
+  border-bottom: 1px solid rgb(29, 29, 29) ;
+}
+.About .frameRight h3{
+  color:#eee;
+  font-size: 30px;
+}
+.About .frameRight p{
+  font-size: 1.7rem;
+  color: #ccc;
+  padding: 1rem 0;
+  line-height: 1.8;
+}
+
+.About .btnforAbout:hover{
+  padding: 1.2rem 6rem;
+  justify-content: space-around;
+  letter-spacing: 0.5rem;
+}
+h1{
+  padding: 2.5rem;
+  color: #bd9361;
+  font-family: "Roboto", sans-serif;
+  font-size: 4rem;
+  text-align: center;
+}
+.menuItem{
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+.menuItem .box{
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  border: 1px solid #bd9361;
+  padding: 9rem 0 ;
+  text-align: center;
+}
+.menuItem h3{
+  font-size: 2rem;
+  padding:  1rem 0;
+  text-transform: capitalize;
+}
+.menuItem .price{
+  color: #fff;
+  font-size: 2.5rem;
+  padding: 0.5rem 0;
+}
+.menuItem .price span{
+  font-size: 1.5rem;
+  text-decoration: line-through;
+}
+.menuItem button{
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.9rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background: #bd9361;
+  border: none;
+  cursor: pointer;
+}
+.menuItem  .box:hover{
+  background:#fff;
+}
+.menuItem  .box:hover > *{
+  color:black;
+}
+.menuItem button:hover{
+  padding: 0.9rem 5rem;
+  border-radius: 15px ;
+}
+.products .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap:1.5rem;
+}
+
+.products .box-container .box{
+  text-align: center;
+  border:1px solid #bd9361;
+  padding: 2rem;
+}
+
+.products .box-container .box .icons a{
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  border:1px solid wheat;
+  color:#fff;
+  margin:.3rem;
+}
+.products .box-container .box .image{
+  padding: 2.5rem 0;
+}
+.products .box-container .box .image img{
+  height: 25rem;
+}
+
+.products .box-container .box .content h3{
+  color:#fff;
+  text-transform: capitalize;
+  padding: 2.5rem;
+  font-size: 2.5rem;
+}
+
+.products .box-container .box .content .stars{
+  padding: 1.5rem;
+}
+
+.products .box-container .box .content .price{
+  color:#fff;
+  font-size: 2.5rem;
+}
+.review .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap:1.5rem;
+}
+
+.review .box-container .box{
+  border: 1px solid white;
+  text-align: center;
+  padding:3rem 2rem;
+}
+
+.review .box-container .box p{
+  font-size: 1.9rem;
+  line-height: 1.8;
+  color:#ccc;
+  padding:2rem 0;
+}
+
+.review .box-container .box .user{
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+}
+
+.review .box-container .box h3{
+  padding:1rem 0;
+  font-size: 2rem;
+  color:#fff;
+}
+.contact .row{
+  display: flex;
+  background:#13131a;
+  flex-wrap: wrap;
+  gap:1rem;
+}
+
+.contact .row .map{
+  flex:1 1 45rem;
+  width: 100%;
+  border: none;
+}
+
+.contact .row form{
+  flex:1 1 45rem;
+  padding:5rem 2rem;
+  text-align: center;
+}
+
+.contact .row form h3{
+  font-family: "Roboto", sans-serif ;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  color:#fff;
+}
+
+.contact .row form .inputBox{
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background:black;
+  border:1px solid #13131a;
+}
+
+.contact .row form .inputBox input{
+  width: 100%;
+  padding:2rem;
+  font-size: 1.7rem;
+  color:#fff;
+  text-transform: none;
+  background:none;
+}
+section h3{
+  color: #bd9361;
+  font-family: "Roboto", sans-serif;
+  font-size: 4rem;
+  text-align: center;
+  padding-bottom: 1.2rem;
+}
+.blogs{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap:1.5rem;
+}
+.blogs .blogsBox{
+  border: 1px solid white;
+  overflow: hidden;
+}
+.blogs .blogsBox .image img{
+  width: 100%;
+  height: 100%;  
+}
+.blogs .blogsBox:hover .image img{
+  transform: scale(1.25);
+}
+.blogs .content{
+  padding: 2rem;
+}
+.blogs h4{
+  width: 100%;
+  font-size: 2.5rem;
+  line-height: 1.5;
+  color:#fff;
+}
+.blogs .content span{
+  color: #bd9361;
+  display: block;
+  padding-top: 1rem;
+  font-size: 2rem;
+}
+.blogs .content p{
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: #ccc;
+  padding: 1rem 0;
+  font-family: "roboto", sans-serif;
+}
+.footer{
+  background: #13131a;
+}
+.footer .links{
+  display: flex;
+  flex: 1 1 45rem;
+  padding: 2rem;
+  justify-content: center;
+}
+.footer .links  img{
+  height: 35px;
+  margin-right: 2.5rem ;
+  border: 1px solid rgb(105, 103, 103);
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.footer .links img:hover {
+  background-color: #bd9361;
+  transform: scale(1.2);
+}
+.footer h4{
+  font-family: "Roboto", sans-serif;
+  color:#ccc;
+  font-size: 2.5rem;
+  text-align: center;
+  padding-bottom: 2.5rem;
+}
+.footer span{
+  color:#bd9361;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width:768px){
+ *{
+    transition: .2s;
+ }
+  #menu-btn{
+      display: inline-block;
+  }
+
+  header .text{
+      position: absolute;
+      top:100%; right: -100%;
+      background: #fff;
+      width: 30rem;
+      height: calc(100vh - 9.5rem);
+  }
+
+
+  header .nav span{
+      color:black;
+      display: block;
+      margin:1.5rem;
+      padding:.5rem;
+      font-size: 2rem;
+  }
+
+  header .buttonshead{
+      width: 30%;
+  }
+
+  .Home{
+      background-position: left;
+      justify-content: center;
+      text-align: center;
+  }
+
+  .Home .textHome h3{
+      font-size: 4.5rem;
+      text-align: center;
+  }
+
+  .Home .textHome p{
+      font-size: 1.5rem;
+  }
+  
+
 }
