@@ -1,4 +1,4 @@
-import Header   from "./structures/Header"
+import Header   from "./structures/Header/Header"
 import Home     from "./structures/Home";
 import About    from "./structures/About"
 import Menu     from "./structures/Menu"

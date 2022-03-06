@@ -3,7 +3,7 @@ export default function Home(){
         <section className="Home">
             <div className="textHome">
                <h3>fresh coffee  in the morning</h3>
-               <p>Lorem Ipsum, Dolor Sit Amet Consectetur Adipisicing Elit. Placeat Labore, Sint Cupiditate Distinctio Tempora Reiciendis.</p>
+               <p>Is not the best way to freshen up after waking up is hot morning coffee? so what are you waiting for?</p>
               <button className="btn" >Get Yours Now</button>
             </div>
         </section>
