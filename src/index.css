@@ -124,6 +124,7 @@ header .coffeelogo{
 section{
   padding: 2rem 7%;
   padding-top: 80px;
+  border-bottom:1px solid #444342;
 }
 .About .frameRight h3{
   color:#eee;
@@ -147,6 +148,7 @@ h1{
   font-family: "Roboto", sans-serif;
   font-size: 4rem;
   text-align: center;
+  cursor: pointer;
 }
 .menuItem{
   display: grid;
@@ -190,6 +192,13 @@ h1{
 .menuItem  .box:hover > *{
   color:black;
 }
+.menuItem .box img{
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 50%;
+}
 .menuItem button:hover{
   padding: 0.9rem 5rem;
   border-radius: 15px ;
@@ -204,6 +213,7 @@ h1{
   text-align: center;
   border:1px solid #bd9361;
   padding: 2rem;
+
 }
 
 .products .box-container .box .icons a{
@@ -220,6 +230,8 @@ h1{
 }
 .products .box-container .box .image img{
   height: 25rem;
+  border-radius: 3px;
+  max-width: 18rem;
 }
 
 .products .box-container .box .content h3{
@@ -236,6 +248,10 @@ h1{
 .products .box-container .box .content .price{
   color:#fff;
   font-size: 2.5rem;
+  
+}
+.content span{
+  text-decoration: line-through;
 }
 .review .box-container{
   display: grid;
@@ -266,6 +282,7 @@ h1{
   padding:1rem 0;
   font-size: 2rem;
   color:#fff;
+  cursor: pointer;
 }
 .contact .row{
   display: flex;
@@ -301,7 +318,6 @@ h1{
   background:black;
   border:1px solid #13131a;
 }
-
 .contact .row form .inputBox input{
   width: 100%;
   padding:2rem;
@@ -316,6 +332,7 @@ h1{
   font-size: 4rem;
   text-align: center;
   padding-bottom: 1.2rem;
+  
 }
 .blogs{
   display: grid;

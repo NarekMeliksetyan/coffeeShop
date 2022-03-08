@@ -1,71 +1,37 @@
 import {useState, useEffect} from "react"
+import uniqid from 'uniqid';
 export default function Menu(){
-  const [productData, setProductData] = useState([])
+  const [Menu, setMenu] = useState([])
+  const [length, setLength] = useState(6)
   
-  
-    const foo = ()=>{
-    fetch(`http://localhost:8000/posts`)
+    useEffect(()=>{
+      
+    fetch(`http://localhost:8000/Menu`)
     .then( res => res.json() )
-    .then( res => setProductData(res) )
-    console.log(productData)
-    }
-    
-    const boo =()=>{
-      return (
-        <div className="box">
-            <img src={require("./images/menu-1.png")} alt=""/>
-            <h3>tasty and healty</h3>
-            <div className="price">$15.99 <span>20.99</span></div>
-            <button href="#" className="btn">add to cart</button>
-        </div>
-
-      )
-    }
+    .then( res => setMenu(res) )
+    },[length])
+   
+  const foo=()=>{
+    {length === 6 ? setLength(Menu.length) : setLength(6)}
+  }
 
     return (
         <section className="Menu" >
-            <h1 >Menu</h1>
+            <h1 onClick={foo} >Menu</h1>
           <div className="menuItem">
 
-              
-            <div className="box">
-            <img src={require("./images/menu-1.png")} alt=""/>
-            <h3>tasty and healty</h3>
-            <div className="price">$15.99 <span>20.99</span></div>
-            <button href="#" className="btn">add to cart</button>
-            </div>
-
-
-            <div className="box">
-            <img src={require("./images/menu-2.png")} alt=""/>
-            <h3>tasty and healty</h3>
-            <div className="price">$15.99 <span>20.99</span></div>
-            <button href="#" className="btn">add to cart</button>
-            </div>
-            <div className="box">
-            <img src={require("./images/menu-3.png")} alt=""/>
-            <h3>tasty and healty</h3>
-            <div className="price">$15.99 <span>20.99</span></div>
-            <button href="#" className="btn">add to cart</button>
-            </div>
-            <div className="box">
-            <img src={require("./images/menu-4.png")} alt=""/>
-            <h3>tasty and healty</h3>
-            <div className="price">$15.99 <span>20.99</span></div>
-            <button href="#" className="btn">add to cart</button>
-            </div>
-            <div className="box">
-            <img src={require("./images/menu-5.png")} alt=""/>
-            <h3>tasty and healty</h3>
-            <div className="price">$15.99 <span>20.99</span></div>
-            <button href="#" className="btn">add to cart</button>
-            </div>
-            <div className="box">
-            <img src={require("./images/menu-6.png")} alt=""/>
-            <h3>tasty and healty</h3>
-            <div className="price">$15.99 <span>20.99</span></div>
-            <button href="#" className="btn">add to cart</button>
-            </div>
+              {Menu.map((assortment)=>{
+                if(assortment.id<=length){
+                return (
+                 <div key={uniqid()} className="box">
+                   <img src={assortment.image} alt=""/>
+                   <h3>{assortment.title}</h3>
+                    <div className="price">${assortment.price}  <span>{assortment.oldPrice}</span></div>
+                    <button href="#" className="btn">add to cart</button>
+                 </div>)
+                }
+                })}
+           
           </div>
         </section>
     )

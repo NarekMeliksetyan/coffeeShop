@@ -1,41 +1,45 @@
+import { useEffect, useState } from "react"
+import uniqid from 'uniqid';
+
 export default function Products(){
+
+   const [ product , setProduct] = useState([])
+   const [length, setLength] = useState(3)
+
+   useEffect(()=>{
+      
+    fetch(`http://localhost:8000/prod`)
+    .then( res => res.json() )
+    .then( res => setProduct(res) )
+    },[length])
+
+    const handleClick=()=>{
+        {length === 3 ? setLength(product.length) : setLength(6)}
+    }
+
     return (
         <section className="products">
 
-         <h1 className="heading"> our <span>products</span> </h1>
+         <h1 className="heading" onClick={handleClick}> our <span>products</span> </h1>
 
             <div className="box-container">
 
-                <div className="box">
-                    <div className="image">
-                        <img src={require("./images/product-1.png")} alt=""/>
-                    </div>
-                    <div className="content">
-                        <h3>fresh coffee</h3>
-                        <div className="price">$15.99 <span>$20.99</span></div>
-                    </div>
-                </div>
+                {product.map((assortment)=>{
 
-                <div className="box">
-                    <div className="image">
-                        <img src={require("./images/product-2.png")} alt=""/>
-                    </div>
-                    <div className="content">
-                        <h3>fresh coffee</h3>
-                        <div className="price">$15.99 <span>$20.99</span></div>
-                    </div>
-                        
-                </div>
+                    if(assortment.id<=length){
 
-                <div className="box">
-                    <div className="image">
-                        <img src={require("./images/product-3.png")} alt=""/>
-                    </div>
-                    <div className="content">
-                        <h3>fresh coffee</h3>
-                        <div className="price">$15.99 <span>$20.99</span></div>
-                    </div>
-                </div>
+                    return (
+                        <div className="box" key = {uniqid()}>
+                             <div className="image">
+                                <img src={assortment.image} alt=""/>
+                             </div>
+                          <div className="content">
+                            <h3>{assortment.title}</h3>
+                            <div className="price">${assortment.price} <span>{assortment.oldPrice}</span></div>
+                          </div>
+                        </div>
+                    )
+                }})}
             </div>
 
         </section>
