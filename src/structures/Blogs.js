@@ -5,7 +5,7 @@ export default function Blogs(){
             <div className="blogs">
              <div className="blogsBox">
                 <div className="image">
-                    <img src={require("./images/blog-1.jpeg")}/>
+                    <img src={require("./images/blog-1.jpeg")} alt="" />
                 </div>
                 <div className="content">
                     <h4>Tasty And Refreshing Coffee</h4>
@@ -16,7 +16,7 @@ export default function Blogs(){
              </div>
              <div className="blogsBox">
                 <div className="image">
-                    <img src={require("./images/blog-2.jpeg")}/>
+                    <img src={require("./images/blog-2.jpeg")} alt=""/>
                 </div>
                 <div className="content">
                     <h4>Tasty And Refreshing Coffee</h4>
@@ -27,7 +27,7 @@ export default function Blogs(){
              </div>
              <div className="blogsBox">
                 <div className="image">
-                    <img src={require("./images/blog-3.jpeg")}/>
+                    <img src={require("./images/blog-3.jpeg") } alt=""/>
                 </div>
                 <div className="content">
                     <h4>Tasty And Refreshing Coffee</h4>

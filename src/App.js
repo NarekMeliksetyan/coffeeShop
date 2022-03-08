@@ -1,6 +1,6 @@
 import Header   from "./structures/Header/Header"
 import Home     from "./structures/Home";
-import About    from "./structures/About"
+import About    from "./structures/AboutCont/About"
 import Menu     from "./structures/Menu"
 import Products from "./structures/Products";
 import Review   from "./structures/Review";

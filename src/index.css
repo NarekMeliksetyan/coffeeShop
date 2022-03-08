@@ -371,6 +371,9 @@ h1{
   padding: 5px;
   border-radius: 50%;
   cursor: pointer;
+} 
+.Menu h1{
+  cursor: pointer;
 }
 .footer .links img:hover {
   background-color: #bd9361;
@@ -386,25 +389,27 @@ h1{
 .footer span{
   color:#bd9361;
 }
-.SignIn{
+
+.essim{
+  font-family: "roboto", sans-serif;
   border-radius: 10px;
   min-height: 60vh;
   position: fixed;
   display: flex;
   flex-direction: column;
-  background: rgba(19, 19, 26, 0.9);
+  background: rgb(19, 19, 26);
   padding: 1rem 5rem;
   color:#fff;  
   align-items: center;
   top: 20%;
   left: 30%;
   right: 30%;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
-.SignIn h1{
-  padding: 0;
 
-}
-.SignIn span{
+.essim span{
   color:#ffffff;
   font-size: 4rem;
 }
@@ -421,6 +426,10 @@ h1{
   border-right: 2px solid #bd9361;
 
 }
+.arr2 input{
+  margin-top: 10px;
+  border: 1px solid #bd9361;
+}
 .forSignin button{
   background-color: #bd9361;
   height: 25px;
@@ -429,14 +438,14 @@ h1{
   border-radius: 15px;
   font-size: 1.7rem;
   font-family: "Roboto", sans-serif;
-  color: white;
   box-sizing: border-box;
   cursor: pointer;
+  color: wheat;
 }
 .forSignin button:hover{
   transform: scale(1.2);
 }
-.SignIn input{  
+.essim input{  
   width: 100%;
   font-size: 1.6rem;
   border: none;
@@ -468,17 +477,31 @@ h1{
   border-left: 2px solid #bd9361;
   border-right: 2px solid #bd9361;
 }
-.signinThrough{
+.essimThrough{
   justify-content: center;
 }
-.SignIn .forCreat{
+.essim .forCreat{
   font-size: 2.5rem;
   text-align: center;
 }
-.SignIn .forCreat span{
+.essim .forCreat span{
   font-size: large;
   color:rgb(53, 156, 53);
   cursor: pointer;  
+}
+.essim .createbtn button{
+  padding: 0.5rem 2rem ; 
+  font-size: 17px;
+  margin: 15px;
+  color: #ccc;
+  border: none;
+  border-radius: 5px;
+}
+.btncr{
+  background-color: #0f3508;
+}
+.btncls{
+  background-color: #350808
 }
 
 
@@ -488,11 +511,18 @@ h1{
  *{
     transition: .2s;
  }
+ .essim .createbtn button{
+   margin: 5px;
+ }
  .arr1{
   border: none;
+  padding: 0;
+  width: 100%;
  }
  .arr2{
    border: none;
+   padding: 0;
+   flex-direction: row;
  }
  header{
    padding: 0 2rem;
@@ -550,15 +580,21 @@ h1{
   .Home .textHome p{
       font-size: 1.5rem;
   }
-  .signinThrough img{
+  .essimThrough img{
     height: 30px;
     margin: 5px;
     cursor: pointer;
   }
-  .SignIn{
+  .essim{
     top: 20vh;
     right: 10%;
     left:10%
+  }
+  .essim h1{
+     font-size: 25px;
+  }
+  .essim span{
+    font-size: 25px;
   }
 
 }

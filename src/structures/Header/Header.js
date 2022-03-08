@@ -7,27 +7,26 @@ import { useState } from "react"
 
 
 export default function Header(){
-    const [isLogin,setIsLogin ] = useState(false)
+    const [isShow,setIsShow ] = useState(false)
     function loginHide(){
-        setIsLogin(!isLogin)
+        setIsShow(!isShow)
     }
-    {console.log(isLogin)}
     return (
         <header>
             <Link to="Home" smooth={true} duration={500}>
-                <img src={require("../images/logo.png")} alt="" className="coffeelogo"/>
+                <img src={require("../images/logo.png")} alt="logo" className="coffeelogo"/>
             </Link>
             <LinksHeader props="text" />
 
             <div  className="ButtonsHeader">
-              {!isLogin ? <img src={require("../images/user.png")}    
+              {!isShow ? <img src={require("../images/user.png")}    
               alt="user"  className = "buttonshead" onClick={loginHide}/> : null}   
                 <img src={require("../images/search.png")} alt="search" className = "buttonshead" />
                 <img src={require("../images/shop.png")}   alt="shop"   className = "buttonshead" />
                 
                 <BurgerHeader />
             </div>
-            {isLogin ? <GeneralLogin setIsLogin={setIsLogin}/> : null}
+            {isShow ? <GeneralLogin loginHide={loginHide} /> : null}
         </header>
     )
 }

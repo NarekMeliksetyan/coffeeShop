@@ -1,9 +1,8 @@
-import { useState,useRef } from "react"
+import { useState } from "react"
 import LinksHeader from "./LinksHeader"
 
 
 export default function BurgerHeader(){   
-    const prevScrollY = useRef(0)
     const [visibility,setIsVisibility] = useState(false) 
     const burgerClick=()=>{
         setIsVisibility(!visibility)  

@@ -2,8 +2,35 @@
   "posts": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "title": "tasty and healty",
+      "image": "",
+      "price": "15.99",
+      "oldPrice": "20.99",
+      "raiting": "5"
+    },
+    {
+      "id": 2,
+      "title": "tasty and healty",
+      "image": "",
+      "price": "15.99",
+      "oldPrice": "20.99",
+      "raiting": "5"
+    },
+    {
+      "id": 3,
+      "title": "tasty and healty",
+      "image": "",
+      "price": "15.99",
+      "oldPrice": "20.99",
+      "raiting": "5"
+    },
+    {
+      "id": 4,
+      "title": "tasty and healty",
+      "image": "",
+      "price": "15.99",
+      "oldPrice": "20.99",
+      "raiting": "5"
     }
   ],
   "user": [
