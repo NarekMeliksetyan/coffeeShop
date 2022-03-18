@@ -1,9 +1,9 @@
 export default function AboutCart2(props){
     const changeAbout = props.changeAbout
     return (
-        <>
+        <div className="Back">
          <h1 className="headding" >ABOUT US</h1>
-      <div className="frame">
+      <div className="frameS">
         <div className="frameLeft">
             
           </div>
@@ -16,6 +16,6 @@ export default function AboutCart2(props){
           <button className="btn" onClick={changeAbout} >Back</button>
         </div>
       </div>
-        </>
+        </div>
     )
 }

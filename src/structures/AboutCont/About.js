@@ -5,7 +5,7 @@ import { useState } from "react"
 
 export default function About(){
 
-  const [isAbout , setIsAbout] = useState(true)
+  const [isAbout , setIsAbout] = useState(false)
 
   const changeAbout=()=>{
     setIsAbout(!isAbout)

@@ -1,22 +1,19 @@
 import Registration from "./Registration"
 import ReactCardFlip from 'react-card-flip';
 import Login from "./LogIn"
-import { useState } from "react"
 import OutsideClickHandler from "react-outside-click-handler"
-
+import HeaderHook from "../Hook/HeaderHook";
 
 export default function GeneralLogin(props){
   
-  const [ isLogR, setIsLogR ] = useState(false)
-  const foo=()=>{
-    setIsLogR(!isLogR)
-  }
+  const { res, isShow } = HeaderHook()
+ 
 
   return (
-    <OutsideClickHandler onOutsideClick={props.loginHide}>
-      <ReactCardFlip containerClassName="essim" flipDirection="horizontal" isFlipped={isLogR} >
-        <Login foo={foo} />
-        <Registration foo={foo}/> 
+    <OutsideClickHandler onOutsideClick={props.res}>
+      <ReactCardFlip containerClassName="essim" flipDirection="horizontal" isFlipped={isShow} >
+        <Login res={res} />
+        <Registration res={res}/> 
       </ReactCardFlip>
     </OutsideClickHandler>
   )

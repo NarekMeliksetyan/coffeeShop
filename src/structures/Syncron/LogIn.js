@@ -29,7 +29,7 @@ export default function GeneralLogin(props){
             <h2>
              are you not registered yet?
             </h2>
-            <span onClick={props.foo}>register now</span>
+            <span onClick={props.res}>register now</span>
           </div>
         </div>
       </form>

@@ -1,26 +1,15 @@
-import Header   from "./structures/Header/Header"
-import Home     from "./structures/Home";
-import About    from "./structures/AboutCont/About"
-import Menu     from "./structures/Menu"
-import Products from "./structures/Products";
-import Review   from "./structures/Review";
-import Contact  from "./structures/Contact";
-import Blogs    from "./structures/Blogs";
-import Footer   from "./structures/Footer";
+import General from "./General";
+import Shop from "./structures/Shop";
+import { Routes,Route } from "react-router-dom";
 
 function App() {
   return (
-   <>
-     <Header />
-     <Home />
-     <About />
-     <Menu />
-     <Products />
-     <Review />
-     <Contact />
-     <Blogs />
-     <Footer />
-    </>
+      
+    <Routes>
+      <Route path="/"    element = {<General />} />
+      <Route path="Shop" element = {<Shop />}    />      
+    </Routes>
+   
   )
 }
 
